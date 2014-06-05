@@ -29,6 +29,8 @@ module SampleApp
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+      I18n.enforce_available_locales = true
    config.secret_key_base = YAML.load(File.open("#{Rails.root}/config/secrets.yml"))[Rails.env]['secret_key_base']
   config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
   end
@@ -41,4 +43,7 @@ module SampleApp
 
    #config.secret_key_base = YAML.load(File.open("#{Rails.root}/config/secrets.yml"))[Rails.env]['secret_key_base']
   end
+
+
+   
 
