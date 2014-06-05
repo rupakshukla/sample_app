@@ -44,6 +44,9 @@ module SampleApp
    #config.secret_key_base = YAML.load(File.open("#{Rails.root}/config/secrets.yml"))[Rails.env]['secret_key_base']
   end
 
+<<<<<<< HEAD
 
    
 
+=======
+>>>>>>> sign-in-out
