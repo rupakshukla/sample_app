@@ -4,15 +4,14 @@ describe "User pages" do
 
   subject { page }
 
-<<<<<<< HEAD
-=======
+
   describe "edit" do
     let(:user) { FactoryGirl.create(:user) }
      before do
       sign_in user
       visit edit_user_path(user)
     end
- describe "with valid information" do
+ describe "with valid information" do 
       let(:new_name)  { "New Name" }
       let(:new_email) { "new@example.com" }
       before do
@@ -43,7 +42,6 @@ describe "User pages" do
     end
   end
 
->>>>>>> sign-in-out
   describe "profile page" do
     let(:user) { FactoryGirl.create(:user) }
     before { visit user_path(user) }
@@ -60,10 +58,7 @@ describe "User pages" do
   
   end
 
-<<<<<<< HEAD
 
-=======
->>>>>>> sign-in-out
   describe "signup" do
 
     before { visit signup_path }
@@ -87,11 +82,7 @@ describe "User pages" do
       it "should create a user" do
         expect { click_button submit }.to change(User, :count).by(1)
       end
-<<<<<<< HEAD
-    end
-  end
 
-=======
       describe "after saving the user" do
         before { click_button submit }
         let(:user) { User.find_by(email: 'user@example.com') }
@@ -102,5 +93,4 @@ describe "User pages" do
       end
     end
   end
->>>>>>> sign-in-out
 end

@@ -1,16 +1,13 @@
 
 SampleApp::Application.routes.draw do
-<<<<<<< HEAD
-  
-  resources :users
-=======
+
   #get "users/new"
 
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   
->>>>>>> sign-in-out
+
   
 
   root  'static_pages#home'
